@@ -1,0 +1,145 @@
+html .main #content h2, body .main #content h2 {
+  font-size: 3.125em;
+  font-family: "Permanent Marker", sans-serif;
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 0.625em;
+  user-select: none;
+}
+
+html .main #content #backToTop button, body .main #content #backToTop button, html .main #content #contact a, body .main #content #contact a, html .main #content #projects .project-container .project-content p.project-description, body .main #content #projects .project-container .project-content p.project-description, html .main #content #skills, body .main #content #skills, html .main #welcome #welcome-content div #bio, body .main #welcome #welcome-content div #bio {
+  font-size: 1.25em;
+}
+@media screen and (max-width: 575px) {
+  html .main #content #backToTop button, body .main #content #backToTop button, html .main #content #contact a, body .main #content #contact a, html .main #content #projects .project-container .project-content p.project-description, body .main #content #projects .project-container .project-content p.project-description, html .main #content #skills, body .main #content #skills, html .main #welcome #welcome-content div #bio, body .main #welcome #welcome-content div #bio {
+    font-size: 1em !important;
+  }
+}
+
+html .main h2.headers, body .main h2.headers {
+  font-size: 3.125em;
+}
+@media screen and (max-width: 575px) {
+  html .main h2.headers, body .main h2.headers {
+    font-size: 2.75em !important;
+  }
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+html .main .welcome-height, body .main .welcome-height {
+  height: auto !important;
+}
+html .main #welcome, body .main #welcome {
+  height: 100vh;
+  background-color: white;
+  padding: 0.625em !important;
+}
+html .main #welcome #welcome-content, body .main #welcome #welcome-content {
+  border: 0.625em solid black;
+  border-radius: 0.625em;
+  height: 100%;
+  padding: 1.25em;
+}
+html .main #welcome #welcome-content div, body .main #welcome #welcome-content div {
+  width: 100%;
+  text-align: center;
+}
+html .main #welcome #welcome-content div h2, body .main #welcome #welcome-content div h2 {
+  font-family: "Permanent Marker";
+  font-size: 6.25em;
+}
+@media screen and (max-width: 575px) {
+  html .main #welcome #welcome-content div h2, body .main #welcome #welcome-content div h2 {
+    font-size: 4.375em !important;
+  }
+}
+html .main #welcome #welcome-content div img, body .main #welcome #welcome-content div img {
+  border-radius: 50%;
+  border: 0.625em solid black;
+  margin: 0.625em 0;
+}
+html .main #welcome #welcome-content div #bio #jumpToContact, body .main #welcome #welcome-content div #bio #jumpToContact {
+  cursor: pointer;
+  color: blue;
+}
+html .main #content, body .main #content {
+  height: 100%;
+  padding: 0.625em;
+}
+html .main #content #skills, body .main #content #skills {
+  text-align: center;
+}
+html .main #content #skills td, body .main #content #skills td {
+  word-break: break-all;
+}
+html .main #content #projects, body .main #content #projects {
+  text-align: left;
+}
+html .main #content #projects .project-container, body .main #content #projects .project-container {
+  border: 0.625em solid black;
+  border-radius: 0.625em;
+  padding: 0.625em;
+  margin-bottom: 0.625em;
+}
+html .main #content #projects .project-container .title-expander, body .main #content #projects .project-container .title-expander {
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+html .main #content #projects .project-container .title-expander > p, body .main #content #projects .project-container .title-expander > p {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+}
+html .main #content #projects .project-container .project-content, body .main #content #projects .project-container .project-content {
+  text-align: center;
+}
+html .main #content #projects .project-container .project-content img, body .main #content #projects .project-container .project-content img {
+  margin: 0.625em 0;
+  border-radius: 0.625em;
+}
+html .main #content #projects .project-container .project-content p.project-description, body .main #content #projects .project-container .project-content p.project-description {
+  margin: 0.625em 0;
+}
+html .main #content #projects .project-container .project-content a, body .main #content #projects .project-container .project-content a {
+  margin: 0.625em 0;
+  padding: 0.625em 1.25em;
+}
+html .main #content #projects .project-container:last-of-type, body .main #content #projects .project-container:last-of-type {
+  margin-bottom: 1.875em;
+}
+html .main #content #contact, body .main #content #contact {
+  padding-bottom: 0.625em;
+  text-align: center;
+}
+html .main #content #contact a, body .main #content #contact a {
+  color: black;
+}
+html .main #content #contact a .contact-icon, body .main #content #contact a .contact-icon {
+  font-size: 120%;
+  margin-right: 0.625em;
+}
+html .main #content #backToTop, body .main #content #backToTop {
+  text-align: center;
+}
+html .main #content #backToTop button, body .main #content #backToTop button {
+  border: 0.625em solid black;
+  border-radius: 0.625em;
+  padding: 0.625em;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-weight: bold;
+}
+html .main #content #backToTop button:hover, body .main #content #backToTop button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+/*# sourceMappingURL=main.css.map */

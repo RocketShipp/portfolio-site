@@ -1,0 +1,5 @@
+{
+  "test" : "Test content",
+  "sup": true,
+  "industry": [1, 2, 3]
+}

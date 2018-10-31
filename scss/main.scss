@@ -1,0 +1,158 @@
+// Variables
+$content-font-size: 1.25em;
+$spacing: .625em;
+
+// Extentions
+%content-section-title {
+    font-size: $content-font-size * 2.5;
+    font-family: 'Permanent Marker', sans-serif;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: $spacing;
+    user-select: none;
+}
+%format-font {
+    font-size: $content-font-size;
+    @media screen and (max-width: 575px) {
+        font-size: 1em !important;
+    }
+}
+%format-headers {
+    font-size: $content-font-size * 2.5;
+    @media screen and (max-width: 575px) {
+        font-size: $content-font-size * 2.2 !important;
+    }
+}
+
+// Main Container Styling
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    .main {
+        h2.headers {
+            @extend %format-headers;
+        }
+        .welcome-height {
+            height: auto !important;
+        }
+        #welcome {
+            height: 100vh;
+            background-color: white;
+            padding: $spacing !important;
+            #welcome-content {
+                border: $spacing solid black;
+                border-radius: $spacing;
+                height: 100%;
+                padding: $spacing * 2;
+                div {
+                    width: 100%;
+                    text-align: center;
+                    h2 {
+                        font-family: 'Permanent Marker';
+                        font-size: $content-font-size * 5;
+                        @media screen and (max-width: 575px) {
+                            font-size: $content-font-size * 3.5 !important;
+                        }
+                    }
+                    img {
+                        border-radius: 50%;
+                        border: $spacing solid black;
+                        margin: $spacing 0;
+                    }
+                    #bio {
+                        @extend %format-font;
+                        #jumpToContact {
+                            cursor: pointer;
+                            color: blue;
+                        }
+                    }
+                }
+                
+            }
+        }
+        #content {
+            height: 100%;
+            padding: $spacing;
+            h2 {
+                @extend %content-section-title;
+            }
+            #skills {
+                text-align: center;
+                @extend %format-font;
+                td {
+                    word-break: break-all;
+                }
+            }
+            #projects {
+                text-align: left;
+                .project-container {
+                    border: $spacing solid black;
+                    border-radius: $spacing;
+                    padding: $spacing;
+                    margin-bottom: $spacing;
+                    .title-expander {
+                        text-align: center;
+                        user-select: none;
+                        cursor: pointer;
+                        & > p {
+                            font-weight: bold;
+                            font-size: $content-font-size * 1.2;
+                            margin: 0;
+                        }
+                    }            
+                    .project-content {
+                        text-align: center;
+                        img {
+                            margin: $spacing 0;
+                            border-radius: $spacing;
+                        }
+                        p.project-description {
+                            @extend %format-font;                            
+                            margin: $spacing 0;
+                        }
+                        a {
+                            margin: $spacing 0;
+                            padding: $spacing ($spacing * 2);
+                        }
+                    }
+                }
+                .project-container:last-of-type {
+                    margin-bottom: $spacing * 3;
+                }
+            }
+            #contact {
+                padding-bottom: $spacing;
+                text-align: center;
+                a {
+                    color: black;
+                    @extend %format-font;
+                    .contact-icon {
+                        font-size: 120%;
+                        margin-right: $spacing;
+                    }
+                }
+            }
+            #backToTop {
+                text-align: center;
+                button {
+                    border: $spacing solid black;
+                    border-radius: $spacing;
+                    padding: $spacing;
+                    outline: none;
+                    background: transparent;
+                    width: 100%;
+                    font-weight: bold;
+                    @extend %format-font;
+                    &:hover {
+                        background-color: rgba(0,0,0,.1);
+                        transition: .2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
