@@ -1,5 +1,5 @@
 // Variables
-$content-font-size: 1.25em;
+$content-font-size: 1.3em;
 $spacing: .625em;
 
 // Extentions
@@ -31,6 +31,16 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
+    *::selection {
+        background-color: rgb(255, 255, 0);
+    }
+    .highlight {
+        background-color: rgb(255, 255, 0);
+        color: black !important;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     .main {
         h2.headers {
             @extend %format-headers;
@@ -47,6 +57,7 @@ html, body {
                 border-radius: $spacing;
                 height: 100%;
                 padding: $spacing * 2;
+                overflow: hidden;
                 div {
                     width: 100%;
                     text-align: center;
@@ -61,6 +72,7 @@ html, body {
                         border-radius: 50%;
                         border: $spacing solid black;
                         margin: $spacing 0;
+                        user-select: none;
                     }
                     #bio {
                         @extend %format-font;
@@ -79,7 +91,7 @@ html, body {
             h2 {
                 @extend %content-section-title;
             }
-            #skills {
+            #skills table {
                 text-align: center;
                 @extend %format-font;
                 td {
@@ -105,9 +117,29 @@ html, body {
                     }            
                     .project-content {
                         text-align: center;
+                        .btn-outline-warning {
+                            background-color: rgb(255, 255, 0) !important;
+                            border-color: rgb(0, 0, 0) !important;
+                            color: black;
+                            &:hover {
+                                background-color: transparent !important;
+                                box-shadow: .2em .2em 0em rgb(0, 0, 0);
+                            }
+                        }
+                        .btn-dark {
+                            background-color: rgb(0, 0, 0) !important;
+                            border-color: rgb(0, 0, 0) !important;
+                            &:hover {
+                                background-color: transparent !important;
+                                color: black;
+                                box-shadow: -.2em .2em 0em rgb(0, 0, 0);
+                            }
+                        }
                         img {
                             margin: $spacing 0;
                             border-radius: $spacing;
+                            border: ($spacing / 2) solid black;
+                            user-select: none;
                         }
                         p.project-description {
                             @extend %format-font;                            
@@ -117,6 +149,24 @@ html, body {
                             margin: $spacing 0;
                             padding: $spacing ($spacing * 2);
                         }
+                        .tech {
+                            padding: $spacing 0;
+                            p {
+                                margin: 0 ($spacing / 2);
+                                font-size: $content-font-size;
+                                .badge {
+                                    background-color: rgb(255, 255, 0) !important;
+                                    border: 1px solid black;
+                                    cursor: pointer;
+                                    transition: .1s;
+                                    &:hover {
+                                        box-shadow: 0 0 .5em rgb(0, 0, 0);
+                                        background-color: transparent !important;
+                                    }
+                                }
+                            }
+                        } 
+                        
                     }
                 }
                 .project-container:last-of-type {
@@ -137,22 +187,21 @@ html, body {
             }
             #backToTop {
                 text-align: center;
-                button {
+                #toTop {
                     border: $spacing solid black;
                     border-radius: $spacing;
                     padding: $spacing;
                     outline: none;
                     background: transparent;
                     width: 100%;
-                    font-weight: bold;
                     @extend %format-font;
                     &:hover {
-                        background-color: rgba(0,0,0,.1);
+                        background-color: rgba(0,0,0,.05);
                         transition: .2s;
+                        cursor: pointer;
                     }
                 }
             }
         }
     }
 }
-
